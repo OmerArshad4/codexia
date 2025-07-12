@@ -7,7 +7,8 @@ import categoryTitles from '../../app/utils/categoryTitles.json';
 const categories = Object.keys(categoryTitles) as (keyof typeof categoryTitles)[];
 
 export default function Content() {
-  const [selectedCategory, setSelectedCategory] = useState<keyof typeof categoryTitles | null>(null);
+const [selectedCategory, setSelectedCategory] = useState<keyof typeof categoryTitles>('Fun');
+
   const [selectedTitle, setSelectedTitle] = useState<string | null>(null);
   const [wordCount, setWordCount] = useState(100);
 
